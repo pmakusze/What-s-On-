@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA52252F1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */; };
+		DA79F4D11ADB3D6B0024720E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D01ADB3D6B0024720E /* API.swift */; };
 		DAA65B7F1AB3B8D800869CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA65B7E1AB3B8D800869CE3 /* AppDelegate.swift */; };
 		DAA65B811AB3B8D800869CE3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA65B801AB3B8D800869CE3 /* FirstViewController.swift */; };
 		DAA65B831AB3B8D800869CE3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA65B821AB3B8D800869CE3 /* SecondViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Whats_On_Splash.jpg; path = ../../../../Downloads/Whats_On_Splash.jpg; sourceTree = "<group>"; };
+		DA79F4D01ADB3D6B0024720E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DAA65B791AB3B8D800869CE3 /* What's On?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's On?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA65B7D1AB3B8D800869CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA65B7E1AB3B8D800869CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				DAA65B7E1AB3B8D800869CE3 /* AppDelegate.swift */,
 				DAA65B801AB3B8D800869CE3 /* FirstViewController.swift */,
+				DA79F4D01ADB3D6B0024720E /* API.swift */,
 				DAA65B821AB3B8D800869CE3 /* SecondViewController.swift */,
 				DAA65B841AB3B8D800869CE3 /* Main.storyboard */,
 				DAA65B871AB3B8D800869CE3 /* Images.xcassets */,
@@ -93,6 +98,7 @@
 		DAA65B7C1AB3B8D800869CE3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */,
 				DAA65B7D1AB3B8D800869CE3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -198,6 +204,7 @@
 				DAA65B861AB3B8D800869CE3 /* Main.storyboard in Resources */,
 				DAA65B8B1AB3B8D800869CE3 /* LaunchScreen.xib in Resources */,
 				DAA65B881AB3B8D800869CE3 /* Images.xcassets in Resources */,
+				DA52252F1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +224,7 @@
 			files = (
 				DAA65B831AB3B8D800869CE3 /* SecondViewController.swift in Sources */,
 				DAA65B7F1AB3B8D800869CE3 /* AppDelegate.swift in Sources */,
+				DA79F4D11ADB3D6B0024720E /* API.swift in Sources */,
 				DAA65B811AB3B8D800869CE3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +417,7 @@
 				DAA65B9C1AB3B8D800869CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAA65B9D1AB3B8D800869CE3 /* Build configuration list for PBXNativeTarget "What's On?Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				DAA65B9F1AB3B8D800869CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,19 +10,15 @@
 	<string>What's On?</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9462</key>
-		<string>https://svn.cs.kent.edu/courses/cs69995/svn/pmakusze/What's%2520On%253F</string>
 		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9688</key>
 		<string>https://svn.cs.kent.edu/courses/cs69995/svn/pmakusze</string>
 		<key>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</key>
-		<string>https://github.com/pmakusze/What-s-On-.git</string>
+		<string>https://svn.cs.kent.edu/courses/cs69995/svn/https://github.com/pmakusze/What-s-On-.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>What's On?.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9462</key>
-		<string>../..</string>
 		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9688</key>
 		<string>../../..</string>
 		<key>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</key>
@@ -30,17 +26,17 @@
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
-		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9462</key>
-		<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
 		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9688</key>
+		<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
+		<key>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</key>
 		<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://svn.cs.kent.edu/courses/cs69995/svn/pmakusze/What's%2520On%253F/What's%20On%3F.xcodeproj</string>
+	<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9462</string>
+	<string>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -53,15 +49,15 @@
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9462</string>
+			<string>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</string>
 			<key>IDESourceControlWCCName</key>
 			<string>What's%20On%3F</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
+			<string>public.vcs.subversion</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</string>
 			<key>IDESourceControlWCCName</key>
