@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		DA52252F1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */; };
 		DA79F4D11ADB3D6B0024720E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D01ADB3D6B0024720E /* API.swift */; };
+		DA79F4D31AE43DDC0024720E /* OnDVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D21AE43DDC0024720E /* OnDVD.swift */; };
+		DA79F4D51AE43E590024720E /* DVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D41AE43E590024720E /* DVD.swift */; };
+		DA79F4DC1AE43E6D0024720E /* DVDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D61AE43E6D0024720E /* DVDViewController.swift */; };
+		DA79F4DD1AE43E6D0024720E /* InTheatresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D71AE43E6D0024720E /* InTheatresCell.swift */; };
+		DA79F4DE1AE43E6D0024720E /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D81AE43E6D0024720E /* SampleData.swift */; };
+		DA79F4DF1AE43E6D0024720E /* SampleDataDVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D91AE43E6D0024720E /* SampleDataDVD.swift */; };
+		DA79F4E01AE43E6D0024720E /* Theatre.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4DA1AE43E6D0024720E /* Theatre.swift */; };
+		DA79F4E11AE43E6D0024720E /* TheatresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4DB1AE43E6D0024720E /* TheatresViewController.swift */; };
 		DAA65B7F1AB3B8D800869CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA65B7E1AB3B8D800869CE3 /* AppDelegate.swift */; };
 		DAA65B811AB3B8D800869CE3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA65B801AB3B8D800869CE3 /* FirstViewController.swift */; };
 		DAA65B831AB3B8D800869CE3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA65B821AB3B8D800869CE3 /* SecondViewController.swift */; };
@@ -31,6 +39,14 @@
 /* Begin PBXFileReference section */
 		DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Whats_On_Splash.jpg; path = ../../../../Downloads/Whats_On_Splash.jpg; sourceTree = "<group>"; };
 		DA79F4D01ADB3D6B0024720E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DA79F4D21AE43DDC0024720E /* OnDVD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDVD.swift; sourceTree = "<group>"; };
+		DA79F4D41AE43E590024720E /* DVD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVD.swift; sourceTree = "<group>"; };
+		DA79F4D61AE43E6D0024720E /* DVDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDViewController.swift; sourceTree = "<group>"; };
+		DA79F4D71AE43E6D0024720E /* InTheatresCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatresCell.swift; sourceTree = "<group>"; };
+		DA79F4D81AE43E6D0024720E /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		DA79F4D91AE43E6D0024720E /* SampleDataDVD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataDVD.swift; sourceTree = "<group>"; };
+		DA79F4DA1AE43E6D0024720E /* Theatre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theatre.swift; sourceTree = "<group>"; };
+		DA79F4DB1AE43E6D0024720E /* TheatresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheatresViewController.swift; sourceTree = "<group>"; };
 		DAA65B791AB3B8D800869CE3 /* What's On?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's On?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA65B7D1AB3B8D800869CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA65B7E1AB3B8D800869CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +99,14 @@
 		DAA65B7B1AB3B8D800869CE3 /* What's On? */ = {
 			isa = PBXGroup;
 			children = (
+				DA79F4D21AE43DDC0024720E /* OnDVD.swift */,
+				DA79F4D61AE43E6D0024720E /* DVDViewController.swift */,
+				DA79F4D71AE43E6D0024720E /* InTheatresCell.swift */,
+				DA79F4D81AE43E6D0024720E /* SampleData.swift */,
+				DA79F4D91AE43E6D0024720E /* SampleDataDVD.swift */,
+				DA79F4DA1AE43E6D0024720E /* Theatre.swift */,
+				DA79F4DB1AE43E6D0024720E /* TheatresViewController.swift */,
+				DA79F4D41AE43E590024720E /* DVD.swift */,
 				DAA65B7E1AB3B8D800869CE3 /* AppDelegate.swift */,
 				DAA65B801AB3B8D800869CE3 /* FirstViewController.swift */,
 				DA79F4D01ADB3D6B0024720E /* API.swift */,
@@ -222,9 +246,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA79F4D51AE43E590024720E /* DVD.swift in Sources */,
 				DAA65B831AB3B8D800869CE3 /* SecondViewController.swift in Sources */,
 				DAA65B7F1AB3B8D800869CE3 /* AppDelegate.swift in Sources */,
+				DA79F4D31AE43DDC0024720E /* OnDVD.swift in Sources */,
+				DA79F4DF1AE43E6D0024720E /* SampleDataDVD.swift in Sources */,
+				DA79F4DC1AE43E6D0024720E /* DVDViewController.swift in Sources */,
+				DA79F4E01AE43E6D0024720E /* Theatre.swift in Sources */,
 				DA79F4D11ADB3D6B0024720E /* API.swift in Sources */,
+				DA79F4DD1AE43E6D0024720E /* InTheatresCell.swift in Sources */,
+				DA79F4DE1AE43E6D0024720E /* SampleData.swift in Sources */,
+				DA79F4E11AE43E6D0024720E /* TheatresViewController.swift in Sources */,
 				DAA65B811AB3B8D800869CE3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
