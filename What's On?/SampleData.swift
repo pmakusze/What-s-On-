@@ -10,7 +10,9 @@ import Foundation
 
 //Set up sample data
 
-let theatresData = [ Theatre(name:"In Theatres"),
+let theatresData = [
+    Theatre(name:"In Theatres"),
     Theatre(name: "Box Office Movies"),
     Theatre(name: "New Releases"),
-    Theatre(name: "Upcoming") ]
+    Theatre(name: "Upcoming")
+]
