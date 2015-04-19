@@ -13,7 +13,7 @@
 		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9688</key>
 		<string>https://svn.cs.kent.edu/courses/cs69995/svn/pmakusze</string>
 		<key>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</key>
-		<string>https://svn.cs.kent.edu/courses/cs69995/svn/https://github.com/pmakusze/What-s-On-.git</string>
+		<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>What's On?.xcodeproj</string>
@@ -27,8 +27,6 @@
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
 		<key>1bc203af-9f1c-4866-81dc-1e2ab80999f1++9688</key>
-		<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
-		<key>FB0DC419B62DDB3FBEBAF773F1769EB595F86048</key>
 		<string>https://svn.cs.kent.edu/courses/cs69995/svn</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>

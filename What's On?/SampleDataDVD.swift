@@ -11,7 +11,7 @@ import Foundation
 //Set up sample data
 
 let DVDData = [
-    DVD(nameDVD:"Top Rentals"),
+    DVD(nameDVD: "Top Rentals"),
     DVD(nameDVD: "Current Releases"),
     DVD(nameDVD: "New Releases"),
     DVD(nameDVD: "Upcoming")

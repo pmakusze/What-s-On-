@@ -6,15 +6,63 @@
 //  Copyright (c) 2015 Makken. All rights reserved.
 //
 
+
 import UIKit
 
 class TheatreViewController: UITableViewController {
     
     var theatres:[Theatre] = theatresData
     
+    @IBOutlet weak var tbv: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+        
+/*        // Indicates url for api call to In Theatre movies
+        let urlAsString = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc"
+        let url = NSURL(string: urlAsString)!
+        let urlSession = NSURLSession.sharedSession()
+        //-----------------
+        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
+            if (error != nil) {
+                println(error.localizedDescription)
+            }
+        var err: NSError?
+        //-----------------
+        var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+        if (err != nil) {
+            println("JSON Error \(err!.localizedDescription)")
+        }
+
+//        let jsonTitle: String! = jsonResult["Title"] as NSString
+//        let jsonTime: String! = jsonResult["time"] as NSString
+            
+//        dispatch_async(dispatch_get_main_queue(), {
+//            nameLabel.text = jsonTitle
+  //          timeLabel.text = jsonTime
+//            })
+        })
+        //----------------
+        jsonQuery.resume() */
     }
+    
+    func getRottenJSON(whichRotten : String){
+        let mySession = NSURLSession.sharedSession()
+        let url: NSURL = NSURL(string: whichRotten)!
+        let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
+            var err: NSError?
+            var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
+            let results : NSArray = theJSON["data"]!["children"] as NSArray
+            dispatch_async(dispatch_get_main_queue(), {
+             //   self.tableData = results
+             //   self.redditListTableView!.reloadData()
+            })
+        })
+        networkTask.resume()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
