@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="s1f-DE-8Uq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--DNC-->
+        <scene sceneID="P6r-TT-nkG">
+            <objects>
+                <navigationController title="DNC" id="0zI-ly-dVw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DVD" id="Nhm-7H-ONu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fod-qa-LS6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vxT-o6-Jxb" kind="relationship" relationship="rootViewController" id="6hK-sp-MLM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iO-QN-vv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478.93333333333334" y="1543.0666666666666"/>
+        </scene>
+        <!--TNC-->
+        <scene sceneID="qAj-aN-viB">
+            <objects>
+                <navigationController title="TNC" id="5ye-Lt-nUg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Theatre" id="Tyq-BU-upJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X3c-pA-gZl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xWh-on-ZZB" kind="relationship" relationship="rootViewController" id="Tfn-dm-q7A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKD-ea-id4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.80000000000001" y="732.72000000000003"/>
+        </scene>
+        <!--TBC-->
+        <scene sceneID="FnP-iZ-gDJ">
+            <objects>
+                <tabBarController title="TBC" id="s1f-DE-8Uq" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="WQI-lS-DUA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5ye-Lt-nUg" kind="relationship" relationship="viewControllers" id="omc-89-agG"/>
+                        <segue destination="0zI-ly-dVw" kind="relationship" relationship="viewControllers" id="zkt-TH-wW0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2U-BX-kQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90.666666666666671" y="1149.2533333333333"/>
+        </scene>
+        <!--Theatre-->
+        <scene sceneID="f9D-k2-uTQ">
+            <objects>
+                <tableViewController id="xWh-on-ZZB" customClass="TheatreViewController" customModule="What_s_On_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="O2w-fL-lpy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TheatreCell" rowHeight="55" id="yzj-CF-NAu" customClass="TheatreCell" customModule="What_s_On_" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yzj-CF-NAu" id="1yI-rJ-G1W">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hHk-PO-XQA">
+                                            <rect key="frame" x="8" y="0.0" width="249" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="hHk-PO-XQA" id="TKQ-Tf-JbT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xWh-on-ZZB" id="VDL-jg-H44"/>
+                            <outlet property="delegate" destination="xWh-on-ZZB" id="WUI-o5-hC6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Theatre" id="cgn-Ks-zzz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wc3-v0-DQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="732"/>
+        </scene>
+        <!--DVD-->
+        <scene sceneID="UKj-JC-7zt">
+            <objects>
+                <tableViewController id="vxT-o6-Jxb" customClass="DVDViewController" customModule="What_s_On_" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="pg8-3i-326">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DVDCell" rowHeight="55" id="i4Z-79-p87" customClass="DVDCell" customModule="What_s_On_" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i4Z-79-p87" id="LzO-We-NBh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameDVD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="exC-Pe-WQn">
+                                            <rect key="frame" x="8" y="0.0" width="249" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="exC-Pe-WQn" id="anM-jw-42w"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vxT-o6-Jxb" id="YyB-4Q-e99"/>
+                            <outlet property="delegate" destination="vxT-o6-Jxb" id="tb0-Kq-bXR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="DVD" id="uEn-Yj-bhw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCu-5a-BoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="1543"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
