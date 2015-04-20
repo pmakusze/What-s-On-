@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA52252F1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */; };
+		DA674A231AE4891400EC8745 /* DVDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674A221AE4891400EC8745 /* DVDDetailsViewController.swift */; };
+		DA674A271AE489A600EC8745 /* TheatresDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674A261AE489A600EC8745 /* TheatresDetailsViewController.swift */; };
 		DA79F4D11ADB3D6B0024720E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D01ADB3D6B0024720E /* API.swift */; };
 		DA79F4D31AE43DDC0024720E /* OnDVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D21AE43DDC0024720E /* OnDVD.swift */; };
 		DA79F4D51AE43E590024720E /* DVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D41AE43E590024720E /* DVD.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Whats_On_Splash.jpg; path = ../../../../Downloads/Whats_On_Splash.jpg; sourceTree = "<group>"; };
+		DA674A221AE4891400EC8745 /* DVDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDDetailsViewController.swift; sourceTree = "<group>"; };
+		DA674A261AE489A600EC8745 /* TheatresDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheatresDetailsViewController.swift; sourceTree = "<group>"; };
 		DA79F4D01ADB3D6B0024720E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA79F4D21AE43DDC0024720E /* OnDVD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDVD.swift; sourceTree = "<group>"; };
 		DA79F4D41AE43E590024720E /* DVD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVD.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				DA79F4E21AE43F730024720E /* Main.storyboard */,
 				DA79F4D21AE43DDC0024720E /* OnDVD.swift */,
 				DA79F4D61AE43E6D0024720E /* DVDViewController.swift */,
+				DA674A221AE4891400EC8745 /* DVDDetailsViewController.swift */,
+				DA674A261AE489A600EC8745 /* TheatresDetailsViewController.swift */,
 				DA79F4D71AE43E6D0024720E /* InTheatresCell.swift */,
 				DA79F4D81AE43E6D0024720E /* SampleData.swift */,
 				DA79F4D91AE43E6D0024720E /* SampleDataDVD.swift */,
@@ -249,9 +255,11 @@
 				DA79F4D51AE43E590024720E /* DVD.swift in Sources */,
 				DAA65B831AB3B8D800869CE3 /* SecondViewController.swift in Sources */,
 				DAA65B7F1AB3B8D800869CE3 /* AppDelegate.swift in Sources */,
+				DA674A271AE489A600EC8745 /* TheatresDetailsViewController.swift in Sources */,
 				DA79F4D31AE43DDC0024720E /* OnDVD.swift in Sources */,
 				DA79F4DF1AE43E6D0024720E /* SampleDataDVD.swift in Sources */,
 				DA79F4DC1AE43E6D0024720E /* DVDViewController.swift in Sources */,
+				DA674A231AE4891400EC8745 /* DVDDetailsViewController.swift in Sources */,
 				DA79F4E01AE43E6D0024720E /* Theatre.swift in Sources */,
 				DA79F4D11ADB3D6B0024720E /* API.swift in Sources */,
 				DA79F4DD1AE43E6D0024720E /* InTheatresCell.swift in Sources */,

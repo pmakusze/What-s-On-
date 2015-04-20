@@ -82,6 +82,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="hHk-PO-XQA" id="TKQ-Tf-JbT"/>
+                                    <segue destination="2wV-yt-9lp" kind="push" id="r0j-WC-ktH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -95,6 +96,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wc3-v0-DQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934" y="732"/>
+        </scene>
+        <!--Theatres Details View Controller-->
+        <scene sceneID="0hv-YG-Jbn">
+            <objects>
+                <viewController id="2wV-yt-9lp" customClass="TheatresDetailsViewController" customModule="What_s_On_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f3a-LK-HRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HXC-S2-aiv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmw-gD-mSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="732"/>
         </scene>
         <!--DVD-->
         <scene sceneID="UKj-JC-7zt">
@@ -121,6 +137,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="exC-Pe-WQn" id="anM-jw-42w"/>
+                                    <segue destination="WeT-ig-nvK" kind="push" id="VSX-7d-dQd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -134,6 +151,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCu-5a-BoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934" y="1543"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="gzf-FZ-SN7">
+            <objects>
+                <viewController id="WeT-ig-nvK" customClass="DVDDetailsViewController" customModule="What_s_On_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gft-MU-3yj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4uv-7N-lxp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECH-gM-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="1543"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

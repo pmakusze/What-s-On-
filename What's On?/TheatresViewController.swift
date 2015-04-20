@@ -54,10 +54,10 @@ class TheatreViewController: UITableViewController {
         let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
             var err: NSError?
             var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
-            let results : NSArray = theJSON["data"]!["children"] as NSArray
+            let results : NSArray = theJSON["title"] as NSArray //!["children"]
             dispatch_async(dispatch_get_main_queue(), {
-             //   self.tableData = results
-             //   self.redditListTableView!.reloadData()
+           //     self.theatres = results
+           //     self.theatres.reloadData()
             })
         })
         networkTask.resume()
@@ -81,7 +81,7 @@ class TheatreViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TheatreCell", forIndexPath: indexPath) as TheatreCell
-        
+ //       let redditEntry : NSMutableDictionary = self.tableData[indexPath.row] as NSMutableDictionary
         let theatre = theatres[indexPath.row] as Theatre
         cell.nameLabel.text = theatre.name
         return cell
