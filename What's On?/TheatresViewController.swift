@@ -18,7 +18,7 @@ class TheatreViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+        //getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
         
 /*        // Indicates url for api call to In Theatre movies
         let urlAsString = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc"
@@ -56,8 +56,8 @@ class TheatreViewController: UITableViewController {
             var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
             let results : NSArray = theJSON["title"] as NSArray //!["children"]
             dispatch_async(dispatch_get_main_queue(), {
-           //     self.theatres = results
-           //     self.theatres.reloadData()
+            //    self.theatres = results
+            //    self.theatres.reloadData()
             })
         })
         networkTask.resume()
@@ -85,5 +85,6 @@ class TheatreViewController: UITableViewController {
         let theatre = theatres[indexPath.row] as Theatre
         cell.nameLabel.text = theatre.name
         return cell
-    }    
+    }
+    
 }
