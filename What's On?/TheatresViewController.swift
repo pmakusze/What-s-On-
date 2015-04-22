@@ -34,7 +34,7 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
             var results2 = [String?](count:15, repeatedValue: nil)
            
             for index = 0; index < 15; index++ {
-                results2[index] = results[index]["title"]!! as? String
+                results2[index] = results[index]["title"]! as? String
             }
             println(results2)
           //  dispatch_async(dispatch_get_main_queue(), {
@@ -63,7 +63,7 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TheatreCell", forIndexPath: indexPath) as TheatreCell
- //       let redditEntry : NSMutableDictionary = self.tableData[indexPath.row] as NSMutableDictionary
+ //     let redditEntry : NSMutableDictionary = self.tableData[indexPath.row] as NSMutableDictionary
         let theatre = theatres[indexPath.row] as Theatre
         cell.nameLabel.text = theatre.name
         return cell
