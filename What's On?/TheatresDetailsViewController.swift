@@ -9,5 +9,9 @@
 import UIKit
 
 class TheatresDetailsViewController: UIViewController {
+    
+    @IBOutlet weak var movieLabel: UILabel!
+
+    
 
 }

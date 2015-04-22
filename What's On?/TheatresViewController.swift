@@ -9,55 +9,31 @@
 
 import UIKit
 
-class TheatreViewController: UITableViewController {
+class TheatreViewController: UITableViewController, UITableViewDelegate {
     
     var theatres:[Theatre] = theatresData
     
+    var segueResults = []
+   
     @IBOutlet weak var tbv: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
-        
-/*        // Indicates url for api call to In Theatre movies
-        let urlAsString = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc"
-        let url = NSURL(string: urlAsString)!
-        let urlSession = NSURLSession.sharedSession()
-        //-----------------
-        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
-            if (error != nil) {
-                println(error.localizedDescription)
-            }
-        var err: NSError?
-        //-----------------
-        var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
-        if (err != nil) {
-            println("JSON Error \(err!.localizedDescription)")
-        }
-
-//        let jsonTitle: String! = jsonResult["Title"] as NSString
-//        let jsonTime: String! = jsonResult["time"] as NSString
-            
-//        dispatch_async(dispatch_get_main_queue(), {
-//            nameLabel.text = jsonTitle
-  //          timeLabel.text = jsonTime
-//            })
-        })
-        //----------------
-        jsonQuery.resume() */
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
     }
-    
+
     func getRottenJSON(whichRotten : String){
+        greet()
         let mySession = NSURLSession.sharedSession()
         let url: NSURL = NSURL(string: whichRotten)!
         let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
             var err: NSError?
             var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
-            let results : NSArray = theJSON["title"] as NSArray //!["children"]
+            let results : NSArray = theJSON["movies"]! as NSArray //!["children"]
+            
             dispatch_async(dispatch_get_main_queue(), {
-            //    self.theatres = results
-            //    self.theatres.reloadData()
+                self.segueResults = results
+             // self.TheatreCell!.reloadData()
             })
         })
         networkTask.resume()

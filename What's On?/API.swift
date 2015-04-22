@@ -10,9 +10,14 @@ import UIKit
 
 class ApiCalls {
 
+    
 
 }
 
+func greet() -> Void
+{
+    println("Hello")
+}
 
 
 
