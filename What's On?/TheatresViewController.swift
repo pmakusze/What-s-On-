@@ -29,16 +29,18 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
             var err: NSError?
             var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
             let results : NSArray = theJSON["movies"]! as NSArray //!["children"]
-            var results2 : [NSArray] = []
+            var results2 = [NSArray]()
             var index: Int
            // for index = 0; index < 15; index++
          //   {
             var tempDictionary : NSDictionary = results[0] as NSDictionary
            //     results2[0] = results[0]["title"]!
-            println(tempDictionary["title"]!)
-            println(results[0]["title"]!)
-            var results3 = [String]()
-            results3[0] = tempDictionary.valueForKey("title")
+       //     println(tempDictionary["title"]!)
+       //     println(results[0]["title"]!)
+      //      var results3 = [NSArray]()
+          //  results3 = tempDictionary.valueForKey("title") as [(String: AnyObject)]
+        let results3 = tempDictionary["title"]! as [(String: AnyObject)]
+
           //   results2[0] = tempDictionary["title"]! as NSArray
          //   }
           //  dispatch_async(dispatch_get_main_queue(), {
