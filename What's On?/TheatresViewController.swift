@@ -23,18 +23,28 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
     }
 
     func getRottenJSON(whichRotten : String){
-        greet()
         let mySession = NSURLSession.sharedSession()
         let url: NSURL = NSURL(string: whichRotten)!
         let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
             var err: NSError?
             var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
             let results : NSArray = theJSON["movies"]! as NSArray //!["children"]
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.segueResults = results
+            var results2 : [NSArray] = []
+            var index: Int
+           // for index = 0; index < 15; index++
+         //   {
+            var tempDictionary : NSDictionary = results[0] as NSDictionary
+           //     results2[0] = results[0]["title"]!
+            println(tempDictionary["title"]!)
+            println(results[0]["title"]!)
+            var results3 = [String]()
+            results3[0] = tempDictionary.valueForKey("title")
+          //   results2[0] = tempDictionary["title"]! as NSArray
+         //   }
+          //  dispatch_async(dispatch_get_main_queue(), {
+             //   self.segueResults = results
              // self.TheatreCell!.reloadData()
-            })
+          //  })
         })
         networkTask.resume()
     }
