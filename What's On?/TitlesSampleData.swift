@@ -18,6 +18,21 @@ import Foundation
 
 var TitleData = [
     Title(name: "WillGoHere"),
-    Title(name: "No2")
+    Title(name: "No2"),
+    Title(name: "WillGoHere"),
+    Title(name: "No2"),
+    Title(name: "WillGoHere"),
+    Title(name: "No2"),
+    Title(name: "WillGoHere"),
+    Title(name: "No2"),
+    Title(name: "WillGoHere"),
+    Title(name: "No2"),
+    Title(name: "WillGoHere"),
+    Title(name: "No2"),
+    Title(name: "WillGoHere"),
+    Title(name: "No2"),
+    Title(name: "WillGoHere")
 ]
+
+//var TitleData = [Title](count: 15, repeatedValue: "movie")
 

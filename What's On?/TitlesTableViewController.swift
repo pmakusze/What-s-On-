@@ -12,9 +12,42 @@ class TitlesViewController: UITableViewController, UITableViewDelegate {
     
     var titles:[Title] = TitleData
     
+    var tc = TitleCell()
+    
+    var segueResults = []
+    
+    override func viewDidLoad() {
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+  
+    }
+    
+    func getRottenJSON(whichRotten : String){
+        let mySession = NSURLSession.sharedSession()
+        let url: NSURL = NSURL(string: whichRotten)!
+        let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
+            var err: NSError?
+            var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
+            let results : NSArray = theJSON["movies"]! as NSArray //!["children"]
+            var index: Int
+            var results2 = [String?](count:15, repeatedValue: nil)
+            
+            for index = 0; index < 15; index++ {
+                results2[index] = results[index]["title"]! as? String
+            }
+          let results3 = results2.filter{ $0 != nil }.map{ $0! }
+            println(results3)
+    //        self.segueResults = results2
+            dispatch_async(dispatch_get_main_queue(), {
+                self.segueResults = results3
+//                self.tc.titleLabel.reloa()
+            })
+        })
+        networkTask.resume()
     }
     
     // MARK: - Table view data source
@@ -24,14 +57,16 @@ class TitlesViewController: UITableViewController, UITableViewDelegate {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count
+        return 15;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TitleCell", forIndexPath: indexPath) as TitleCell
-        //       let redditEntry : NSMutableDictionary = self.tableData[indexPath.row] as NSMutableDictionary
-        let title = titles[indexPath.row] as Title
-        cell.titleLabel.text = title.name
+ //       let rottenEntry : NSMutableDictionary = self.segueResults[indexPath.row] as NSMutableDictionary
+       let title = titles[indexPath.row] as Title
+  //      cell.titleLabel.text = rottenEntry["title"] as? String
+       cell.titleLabel.text = title.name
+
         return cell
     }
     

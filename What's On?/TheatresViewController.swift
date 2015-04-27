@@ -14,38 +14,15 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
     
     var theatres:[Theatre] = theatresData
     
-    var segueResults = []
+ //   var segueResults = []
    
-    @IBOutlet weak var tbv: UITableView!
+//    @IBOutlet weak var tbv: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+        
     }
 
-    func getRottenJSON(whichRotten : String){
-        let mySession = NSURLSession.sharedSession()
-        let url: NSURL = NSURL(string: whichRotten)!
-        let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
-            var err: NSError?
-            var theJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSMutableDictionary
-            let results : NSArray = theJSON["movies"]! as NSArray //!["children"]
-            var index: Int
-            var results2 = [String?](count:15, repeatedValue: nil)
-           
-            for index = 0; index < 15; index++ {
-                results2[index] = results[index]["title"]! as? String
-            }
-            println(results2)
-          //  dispatch_async(dispatch_get_main_queue(), {
-             //   self.segueResults = results
-             // self.TheatreCell!.reloadData()
-          //  })
-        })
-        networkTask.resume()
-    }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,6 +44,16 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
         let theatre = theatres[indexPath.row] as Theatre
         cell.nameLabel.text = theatre.name
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "Title") {
+            
+            var vc = segue.destinationViewController as TitlesViewController
+            
+        }
+        
     }
     
 }
