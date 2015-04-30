@@ -43,8 +43,10 @@ class TitlesViewController: UITableViewController, UITableViewDelegate {
             println(results3)
     //        self.segueResults = results2
             dispatch_async(dispatch_get_main_queue(), {
-                self.segueResults = results3
-//                self.tc.titleLabel.reloa()
+              //  for index = 0; index < self.segueResults.count; index++ {
+                    self.segueResults = results3
+              //  }
+//                self.tc.titleLabel.reload()
             })
         })
         networkTask.resume()
@@ -57,14 +59,14 @@ class TitlesViewController: UITableViewController, UITableViewDelegate {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15;
+        return segueResults.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TitleCell", forIndexPath: indexPath) as TitleCell
  //       let rottenEntry : NSMutableDictionary = self.segueResults[indexPath.row] as NSMutableDictionary
        let title = titles[indexPath.row] as Title
-  //      cell.titleLabel.text = rottenEntry["title"] as? String
+   //     cell.titleLabel.text = rottenEntry["title"] as? String
        cell.titleLabel.text = title.name
 
         return cell
