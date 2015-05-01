@@ -18,7 +18,7 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
     
     var textArray: NSMutableArray! = NSMutableArray()
     
-    var segueResults:[String]!
+    var segueResultsTheatre:[String]!
     
     func getRottenJSON(whichRotten : String){
         let mySession = NSURLSession.sharedSession()
@@ -35,15 +35,14 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
             }
             let results3 = results2.filter{ $0 != nil }.map{ $0! }
             println(results3)
-            self.segueResults = results3
+            self.segueResultsTheatre = results3
 
-            //        self.segueResults = results2
-        //    dispatch_async(dispatch_get_main_queue(), {
+            dispatch_async(dispatch_get_main_queue(), {
                 //  for index = 0; index < self.segueResults.count; index++ {
-                            //self.segueResults = results3
+                self.segueResultsTheatre = results3
                 //  }
                 //    self.tc.titleLabel.reload()
-          //  })
+            })
         })
         networkTask.resume()
     }
@@ -84,13 +83,15 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if(segue.identifier == "In Theatres") {
+   //     if(segue.identifier == "In Theatres") {
             
-            var vc = segue.destinationViewController as TitlesViewController
+            var tvc: TitlesViewController = segue.destinationViewController as TitlesViewController
             
-            getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+            tvc.segueResults = segueResultsTheatre
             
-        }
+       //     getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+            
+ //       }
         
     }
     

@@ -12,10 +12,18 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
     
     var segueResults:[String]!
     
-    var tableD: NSMutableArray! = NSMutableArray()
+    var theatreArray: NSMutableArray! = NSMutableArray()
+    
+    @IBOutlet weak var theatreView: UITableView!
+    
+//    var tableD: NSMutableArray! = NSMutableArray()
     
     override func viewDidLoad() {
     //    getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+        
+        self.theatreArray.addObject("Movie")
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,7 +32,7 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
   
     }
     
-    func getRottenJSON(whichRotten : String){
+  /*  func getRottenJSON(whichRotten : String){
         let mySession = NSURLSession.sharedSession()
         let url: NSURL = NSURL(string: whichRotten)!
         let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
@@ -39,7 +47,7 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
             }
           let results3 = results2.filter{ $0 != nil }.map{ $0! }
             println(results3)
-    //        self.segueResults = results2 */
+    //        self.segueResults = results2
             dispatch_async(dispatch_get_main_queue(), {
               //  for index = 0; index < self.segueResults.count; index++ {
                     self.segueResults = results3
@@ -48,7 +56,7 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
             })
         })
         networkTask.resume()
-    }
+    } */
     
     // MARK: - Table view data source
 
@@ -57,13 +65,18 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15;
+        return theatreArray.count;
     }
     
    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //    let cell = tableView.dequeueReusableCellWithIdentifier("TitleCell", forIndexPath: indexPath) as TitleCell
-          var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        var cell: UITableViewCell = self.theatreView.dequeueReusableCellWithIdentifier("theatreCell", forIndexPath: indexPath) as UITableViewCell
 
+        cell.textLabel?.text = self.theatreArray.objectAtIndex(indexPath.row) as? String
+    
+    
+    //    let cell = tableView.dequeueReusableCellWithIdentifier("TitleCell", forIndexPath: indexPath) as TitleCell
+
+    
    //     let rottenEntry : NSMutableDictionary = self.tableD[indexPath.row] as NSMutableDictionary
    //     let rottenEntry : [Title] = segueResults
     //        [name: self.segueResults[0]
