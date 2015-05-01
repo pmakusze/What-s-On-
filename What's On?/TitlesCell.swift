@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Makken. All rights reserved.
 //
 
+/*
+
 import UIKit
 
 class TitleCell: UITableViewCell {
@@ -24,3 +26,5 @@ class TitleCell: UITableViewCell {
     }
     
 }
+
+*/

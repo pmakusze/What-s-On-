@@ -6,11 +6,13 @@
 //  Copyright (c) 2015 Makken. All rights reserved.
 //
 
+/*
+
 import UIKit
 
 class TheatreCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
+ //   @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,3 +26,4 @@ class TheatreCell: UITableViewCell {
     }
     
 }
+*/

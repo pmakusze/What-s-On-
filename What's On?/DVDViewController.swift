@@ -8,6 +8,13 @@
 
 import UIKit
 
+let DVDData = [
+    DVD(nameDVD: "Top Rentals"),
+    DVD(nameDVD: "Current Releases"),
+    DVD(nameDVD: "New Releases"),
+    DVD(nameDVD: "Upcoming")
+]
+
 class DVDViewController: UITableViewController {
     
     var DVDs:[DVD] = DVDData
