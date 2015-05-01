@@ -23,7 +23,6 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
             self.theatreArray.addObject(self.segueResults[index])
         }
         
-        
     }
     
     override func didReceiveMemoryWarning() {
