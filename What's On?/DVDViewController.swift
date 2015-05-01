@@ -6,14 +6,10 @@
 //  Copyright (c) 2015 Makken. All rights reserved.
 //
 
+/*
 import UIKit
 
-let DVDData = [
-    DVD(nameDVD: "Top Rentals"),
-    DVD(nameDVD: "Current Releases"),
-    DVD(nameDVD: "New Releases"),
-    DVD(nameDVD: "Upcoming")
-]
+
 
 class DVDViewController: UITableViewController {
     
@@ -45,4 +41,4 @@ class DVDViewController: UITableViewController {
         cell.nameLabel.text = dvd.nameDVD
         return cell
     }
-}
+} */

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Makken. All rights reserved.
 //
 
+/*
 import UIKit
 
 class DVDCell: UITableViewCell {
@@ -23,4 +24,4 @@ class DVDCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-}
+}*/

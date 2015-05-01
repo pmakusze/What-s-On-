@@ -16,7 +16,11 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
         
     var textArray: NSMutableArray! = NSMutableArray()
     
+    var cellID: UITableViewCell!
+    
     var segueResultsTheatre:[String]!
+    
+    var tableRowName: String!
     
     func getRottenJSON(whichRotten : String){
         let mySession = NSURLSession.sharedSession()
@@ -79,9 +83,21 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow()
+        
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!
+        
+    //    self.tableRowName = currentCell.textLabel!.text
+        
+        println(currentCell.textLabel!.text)
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-   //     if(segue.identifier == "In Theatres") {
+     //   if(self.tableRowName == "In Theatres") {
             
             var tvc: TitlesViewController = segue.destinationViewController as TitlesViewController
             
@@ -89,7 +105,7 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
             
        //     getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
             
- //       }
+  //      }
         
     }
     
