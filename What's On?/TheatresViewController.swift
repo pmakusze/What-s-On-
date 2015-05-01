@@ -13,9 +13,7 @@ import UIKit
 class TheatreViewController: UITableViewController, UITableViewDelegate {
     
     @IBOutlet weak var tV: UITableView!
-    
-//    var theatres:[Theatre] = theatresData
-    
+        
     var textArray: NSMutableArray! = NSMutableArray()
     
     var segueResultsTheatre:[String]!
