@@ -10,17 +10,12 @@ import UIKit
 
 class TitlesViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
-   // var titles:[AnyObject] = TitleData
-    
-   // var tc = TitleCell()
-    
     var segueResults:[String]!
     
     var tableD: NSMutableArray! = NSMutableArray()
     
     override func viewDidLoad() {
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
- //       self.tableD
+    //    getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,7 +50,7 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
         networkTask.resume()
     }
     
-    // MARK: - Table view data sou  rce
+    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

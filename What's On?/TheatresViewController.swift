@@ -38,12 +38,12 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
             self.segueResults = results3
 
             //        self.segueResults = results2
-            dispatch_async(dispatch_get_main_queue(), {
+        //    dispatch_async(dispatch_get_main_queue(), {
                 //  for index = 0; index < self.segueResults.count; index++ {
-                            self.segueResults = results3
+                            //self.segueResults = results3
                 //  }
                 //    self.tc.titleLabel.reload()
-            })
+          //  })
         })
         networkTask.resume()
     }
@@ -51,7 +51,7 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
     override func viewDidLoad() {
        super.viewDidLoad()
         
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
+       getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
         
         self.textArray.addObject("In Theatres")
         self.textArray.addObject("Box Office Movies")
@@ -82,7 +82,7 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
         return cell
     }
     
-  /*  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if(segue.identifier == "In Theatres") {
             
@@ -90,26 +90,8 @@ class TheatreViewController: UITableViewController, UITableViewDelegate {
             
             getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc")
             
-            TitleData = [
-                Title(name: self.segueResults[0]),
-                Title(name: self.segueResults[1]),
-                Title(name: self.segueResults[2]),
-                Title(name: self.segueResults[3]),
-                Title(name: self.segueResults[4]),
-                Title(name: self.segueResults[5]),
-                Title(name: self.segueResults[6]),
-                Title(name: self.segueResults[7]),
-                Title(name: self.segueResults[8]),
-                Title(name: self.segueResults[9]),
-                Title(name: self.segueResults[10]),
-                Title(name: self.segueResults[11]),
-                Title(name: self.segueResults[12]),
-                Title(name: self.segueResults[13]),
-                Title(name: self.segueResults[14]),
-            ]
-            
         }
         
-    }*/
+    }
     
 }
