@@ -95,7 +95,7 @@ class DVDViewController: UITableViewController, UITableViewDelegate {
         
         var iP = self.tV.indexPathForSelectedRow()
         let currentCell = tableView.cellForRowAtIndexPath(iP!) as UITableViewCell!
-        var tvc: TitlesViewController = segue.destinationViewController as TitlesViewController
+        var tvc: DVDTitlesViewController = segue.destinationViewController as DVDTitlesViewController
         
         
         if(currentCell.textLabel!.text == "Top Rentals") {

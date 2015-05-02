@@ -41,7 +41,7 @@ class TitlesViewController: UITableViewController, UITableViewDelegate, UITableV
         return theatreArray.count;
     }
     
-   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell = self.theatreView.dequeueReusableCellWithIdentifier("theatreCell", forIndexPath: indexPath) as UITableViewCell
 
         cell.textLabel?.text = self.theatreArray.objectAtIndex(indexPath.row) as? String
