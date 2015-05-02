@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA3FE1C31AE84B0F0049EE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3FE1C21AE84B0F0049EE92 /* Main.storyboard */; };
 		DA3FE1CB1AE84B2B0049EE92 /* TitlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FE1C81AE84B2B0049EE92 /* TitlesTableViewController.swift */; };
-		DA52252F1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */; };
 		DA674A231AE4891400EC8745 /* DVDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674A221AE4891400EC8745 /* DVDDetailsViewController.swift */; };
 		DA79F4DC1AE43E6D0024720E /* DVDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4D61AE43E6D0024720E /* DVDViewController.swift */; };
 		DA79F4E11AE43E6D0024720E /* TheatresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79F4DB1AE43E6D0024720E /* TheatresViewController.swift */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		DA3FE1C21AE84B0F0049EE92 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DA3FE1C81AE84B2B0049EE92 /* TitlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesTableViewController.swift; sourceTree = "<group>"; };
-		DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Whats_On_Splash.jpg; path = ../../../../Downloads/Whats_On_Splash.jpg; sourceTree = "<group>"; };
 		DA674A221AE4891400EC8745 /* DVDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDDetailsViewController.swift; sourceTree = "<group>"; };
 		DA79F4D61AE43E6D0024720E /* DVDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDViewController.swift; sourceTree = "<group>"; };
 		DA79F4DB1AE43E6D0024720E /* TheatresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheatresViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			children = (
 				DAA65B891AB3B8D800869CE3 /* LaunchScreen.xib */,
 				DAA65B871AB3B8D800869CE3 /* Images.xcassets */,
-				DA52252E1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg */,
 				DAA65B7D1AB3B8D800869CE3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -222,7 +219,6 @@
 			files = (
 				DAA65B8B1AB3B8D800869CE3 /* LaunchScreen.xib in Resources */,
 				DAA65B881AB3B8D800869CE3 /* Images.xcassets in Resources */,
-				DA52252F1AB3C9DE00FC19E4 /* Whats_On_Splash.jpg in Resources */,
 				DA3FE1C31AE84B0F0049EE92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
