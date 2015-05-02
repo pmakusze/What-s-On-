@@ -12,14 +12,13 @@ import UIKit
 
 class DVDViewController: UITableViewController, UITableViewDelegate {
     
-    
     @IBOutlet weak var tV: UITableView!
     
     var textArray: NSMutableArray! = NSMutableArray()
     
-    var inTheatres:[String]!
-    var boxOfficeMovies:[String]!
-    var opening:[String]!
+    var topRentals:[String]!
+    var currentReleases:[String]!
+    var newReleases:[String]!
     var upcoming:[String]!
     
     var counter: Int = 1
@@ -40,11 +39,11 @@ class DVDViewController: UITableViewController, UITableViewDelegate {
             let results3 = results2.filter{ $0 != nil }.map{ $0! }
             //           println(results3)
             if(self.counter == 1) {
-                self.inTheatres = results3}
+                self.topRentals = results3}
             if(self.counter == 2) {
-                self.boxOfficeMovies = results3}
+                self.currentReleases = results3}
             if(self.counter == 3) {
-                self.opening = results3}
+                self.newReleases = results3}
             if(self.counter == 4) {
                 self.upcoming = results3}
             
@@ -56,15 +55,15 @@ class DVDViewController: UITableViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
-        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/current_releases.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
+        getRottenJSON("http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/upcoming.json?apikey=cghzqcwd685bsb8j8f8efwzc&limit=10")
         
         
-        self.textArray.addObject("In Theatres")
-        self.textArray.addObject("Box Office Movies")
-        self.textArray.addObject("Opening")
+        self.textArray.addObject("Top Rentals")
+        self.textArray.addObject("Current Releases")
+        self.textArray.addObject("New Releases")
         self.textArray.addObject("Upcoming")
     }
     
@@ -99,16 +98,16 @@ class DVDViewController: UITableViewController, UITableViewDelegate {
         var tvc: TitlesViewController = segue.destinationViewController as TitlesViewController
         
         
-        if(currentCell.textLabel!.text == "In Theatres") {
-            tvc.segueResults = inTheatres
+        if(currentCell.textLabel!.text == "Top Rentals") {
+            tvc.segueResults = topRentals
         }
         
-        if(currentCell.textLabel!.text == "Box Office Movies") {
-            tvc.segueResults = boxOfficeMovies
+        if(currentCell.textLabel!.text == "Current Releases") {
+            tvc.segueResults = currentReleases
         }
         
-        if(currentCell.textLabel!.text == "Opening") {
-            tvc.segueResults = opening
+        if(currentCell.textLabel!.text == "New Releases") {
+            tvc.segueResults = newReleases
         }
         
         if(currentCell.textLabel!.text == "Upcoming") {

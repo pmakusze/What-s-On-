@@ -11,11 +11,10 @@ import UIKit
 class DVDTitlesViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
     var segueResults:[String]!
-    
-    @IBOutlet weak var DVDView: UITableView!
-    
+        
     var DVDArray: NSMutableArray! = NSMutableArray()
     
+    @IBOutlet weak var DVDView: UITableView!
     
     override func viewDidLoad() {
         var index: Int
@@ -43,7 +42,7 @@ class DVDTitlesViewController: UITableViewController, UITableViewDelegate, UITab
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = self.theatreView.dequeueReusableCellWithIdentifier("DVDCell", forIndexPath: indexPath) as UITableViewCell
+        var cell: UITableViewCell = self.DVDView.dequeueReusableCellWithIdentifier("DVDCell", forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = self.DVDArray.objectAtIndex(indexPath.row) as? String
         
